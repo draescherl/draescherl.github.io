@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lucas Draescher on draescherl</title>
+    <link>https://draescherl.github.io/</link>
+    <description>Recent content in Lucas Draescher on draescherl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    
+	<atom:link href="https://draescherl.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>https://draescherl.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/contact/</guid>
+      <description>Contact  Email LinkedIn GitHub  Credits I&amp;rsquo;d like to give credit to d-asnaghi for porting the awesome HTML5 UP Dimension theme to Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Intro</title>
+      <link>https://draescherl.github.io/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/introduction/</guid>
+      <description>Why write this blog ? I&amp;rsquo;ve come to a point where I&amp;rsquo;m confident enough in my capabilities as a developer to start writing about some projects I&amp;rsquo;m working on. The objective of this is to have a history of what I&amp;rsquo;ve worked on, a kind of personal documentation (because we always remember everything right).
+Hopefully you&amp;rsquo;ll enjoy the content I&amp;rsquo;ll be putting out, and maybe someone might learn a thing or two !</description>
+    </item>
+    
+    <item>
+      <title>Whoami</title>
+      <link>https://draescherl.github.io/whoami/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/whoami/</guid>
+      <description>General information Where I studied ~/2020-2023 &amp;gt; pwd /france/pau/cytech-ecole-ingenieur ~/2018-2020 &amp;gt; pwd /france/pau/eisti-prepa-integree ~/2018 &amp;gt; pwd /france/pau/lycee-saint-cricq The languages I speak ~/ &amp;gt; locale -a fr_FR.utf8 en_IE.utf8 Hard skills ~/ &amp;gt; ls -R ./web-development: html-css-js php sql vue.js angular express hugo ./low-level: c nasm32 ./object-oriented: java ./scripting: node.js python bash ./systems-administration: linux gitlab-ci-cd docker nginx wireguard aws-ec2 ./others: pascal prolog R </description>
+    </item>
+    
+  </channel>
+</rss>
