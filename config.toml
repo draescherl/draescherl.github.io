@@ -1,0 +1,4 @@
+baseURL = "https://draescherl.github.io/"
+languageCode = "en-uk"
+title = "draescherl"
+theme = "dimension"
