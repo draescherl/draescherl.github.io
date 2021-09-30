@@ -3,31 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://draescherl.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://draescherl.github.io/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>https://draescherl.github.io/introduction/</loc>
+    <loc>https://draescherl.github.io/posts/wireguard/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://draescherl.github.io/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://draescherl.github.io/posts/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://draescherl.github.io/tags/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://draescherl.github.io/whoami/</loc>
+    <loc>https://draescherl.github.io/tags/vpn/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/tags/wireguard/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/posts/whoami/</loc>
+    <lastmod>2021-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://draescherl.github.io/series/</loc>
   </url>
   
 </urlset>

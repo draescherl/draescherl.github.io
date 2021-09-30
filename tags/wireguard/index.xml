@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wireguard on Lucas DRAESCHER</title>
+    <link>https://draescherl.github.io/tags/wireguard/</link>
+    <description>Recent content in Wireguard on Lucas DRAESCHER</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://draescherl.github.io/tags/wireguard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to set up a WireGuard VPN</title>
+      <link>https://draescherl.github.io/posts/wireguard/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/posts/wireguard/</guid>
+      <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. I&amp;rsquo;ll start off with the client side configuration and then we will have a look at the server side.
+Prerequisites Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&amp;rsquo;s as simple as running Example  sudo apt update</description>
+    </item>
+    
+  </channel>
+</rss>
