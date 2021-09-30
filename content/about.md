@@ -1,6 +1,6 @@
----
-title: Intro
----
++++
+title = "About"
++++
 
 ### Why write this blog ?
 I've come to a point where I'm confident enough in my capabilities as a developer to start writing about some projects I'm working on. The objective of this is to have a history of what I've worked on, a kind of personal documentation (because we always remember everything right).
