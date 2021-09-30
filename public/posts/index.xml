@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on draescherl</title>
+    <title>Posts on Lucas DRAESCHER</title>
     <link>https://draescherl.github.io/posts/</link>
-    <description>Recent content in Posts on draescherl</description>
+    <description>Recent content in Posts on Lucas DRAESCHER</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://draescherl.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to set up a WireGuard VPN</title>
+      <link>https://draescherl.github.io/posts/wireguard/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/posts/wireguard/</guid>
+      <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. I&amp;rsquo;ll start off with the client side configuration and then we will have a look at the server side.
+Prerequisites Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&amp;rsquo;s as simple as running Example  sudo apt update</description>
+    </item>
+    
+    <item>
+      <title>whoami</title>
+      <link>https://draescherl.github.io/posts/whoami/</link>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/posts/whoami/</guid>
+      <description>General information Where I studied Example  ~/2020-2023 &amp;gt; pwd
+/france/pau/cytech-ecole-ingenieur
+~/2018-2020 &amp;gt; pwd
+/france/pau/eisti-prepa-integree
+~/2018 &amp;gt; pwd
+/france/pau/lycee-saint-cricq
+  The languages I speak Example  ~/ &amp;gt; locale -a
+fr_FR.utf8
+en_IE.utf8  Hard skills Example  ~/ &amp;gt; ls -R
+./web-development:
+html-css-js php sql vue.js angular express hugo
+./low-level:
+c nasm32
+./object-oriented:
+java
+./scripting:
+node.js python bash
+./systems-administration:
+linux gitlab-ci-cd docker nginx wireguard aws-ec2
+./others:
+pascal prolog R</description>
+    </item>
     
   </channel>
 </rss>
