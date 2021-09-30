@@ -3,7 +3,7 @@ title = "About"
 +++
 
 ### Why write this blog ?
-I've come to a point where I'm confident enough in my capabilities as a developer to start writing about some projects I'm working on. The objective of this is to have a history of what I've worked on, a kind of personal documentation (because we always remember everything right).
+I've come to a point where I'm confident enough in my capabilities as a developer to start writing about some projects I'm working on. The objective of this is to have a history of what I've worked on, a kind of personal documentation (because we always remember everything, right ?).
 
 Hopefully you'll enjoy the content I'll be putting out, and maybe someone might learn a thing or two !
 
