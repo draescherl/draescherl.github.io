@@ -7,7 +7,7 @@ date = "2021-08-18"
 ### General information
 
 #### Where I studied
-{{< notice example >}}
+```bash
 ~/2020-2023 > pwd  
 /france/pau/cytech-ecole-ingenieur
 
@@ -16,17 +16,17 @@ date = "2021-08-18"
 
 ~/2018 > pwd  
 /france/pau/lycee-saint-cricq
-{{< /notice >}}
+```
 
 #### The languages I speak
-{{< notice example >}}
+```bash
 ~/ > locale -a  
 fr_FR.utf8  
 en_IE.utf8
-{{< /notice >}}
+```
 
 ### Hard skills
-{{< notice example >}}
+```bash
 ~/ > ls -R
 
 ./web-development:  
@@ -46,4 +46,4 @@ linux gitlab-ci-cd docker nginx wireguard aws-ec2
 
 ./others:  
 pascal prolog R
-{{< /notice >}}
+```
