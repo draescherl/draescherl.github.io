@@ -18,8 +18,7 @@
       
       <guid>https://draescherl.github.io/posts/wireguard/</guid>
       <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&amp;rsquo;ll start off with the server-side configuration and move on to the client-side next.
-Prerequisites Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&amp;rsquo;s as simple as running :
-sudo apt update sudo apt install wireguard Where to find the files All the config files for wireguard can be found in /etc/wireguard/.</description>
+Table of Contents  Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial.</description>
     </item>
     
   </channel>
