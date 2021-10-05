@@ -6,19 +6,20 @@
     <description>Recent content on Lucas DRAESCHER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://draescherl.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>How to set up a WireGuard VPN</title>
+      <title>Setting up a WireGuard VPN</title>
       <link>https://draescherl.github.io/posts/wireguard/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://draescherl.github.io/posts/wireguard/</guid>
-      <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. I&amp;rsquo;ll start off with the client side configuration and then we will have a look at the server side.
-Prerequisites Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&amp;rsquo;s as simple as running Example  sudo apt update</description>
+      <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&amp;rsquo;ll start off with the server-side configuration and move on to the client-side next.
+Prerequisites Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&amp;rsquo;s as simple as running :
+sudo apt update sudo apt install wireguard Where to find the files All the config files for wireguard can be found in /etc/wireguard/.</description>
     </item>
     
     <item>
@@ -27,27 +28,7 @@ Prerequisites Obviously, the Wireguard software is required to follow this tutor
       <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://draescherl.github.io/posts/whoami/</guid>
-      <description>General information Where I studied Example  ~/2020-2023 &amp;gt; pwd
-/france/pau/cytech-ecole-ingenieur
-~/2018-2020 &amp;gt; pwd
-/france/pau/eisti-prepa-integree
-~/2018 &amp;gt; pwd
-/france/pau/lycee-saint-cricq
-  The languages I speak Example  ~/ &amp;gt; locale -a
-fr_FR.utf8
-en_IE.utf8  Hard skills Example  ~/ &amp;gt; ls -R
-./web-development:
-html-css-js php sql vue.js angular express hugo
-./low-level:
-c nasm32
-./object-oriented:
-java
-./scripting:
-node.js python bash
-./systems-administration:
-linux gitlab-ci-cd docker nginx wireguard aws-ec2
-./others:
-pascal prolog R</description>
+      <description>General information Where I studied ~/2020-2023 &amp;gt; pwd /france/pau/cytech-ecole-ingenieur ~/2018-2020 &amp;gt; pwd /france/pau/eisti-prepa-integree ~/2018 &amp;gt; pwd /france/pau/lycee-saint-cricq The languages I speak ~/ &amp;gt; locale -a fr_FR.utf8 en_IE.utf8 Hard skills ~/ &amp;gt; ls -R ./web-development: html-css-js php sql vue.js angular express hugo ./low-level: c nasm32 ./object-oriented: java ./scripting: node.js python bash ./systems-administration: linux gitlab-ci-cd docker nginx wireguard aws-ec2 ./others: pascal prolog R </description>
     </item>
     
     <item>

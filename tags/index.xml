@@ -6,24 +6,33 @@
     <description>Recent content in Tags on Lucas DRAESCHER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://draescherl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>networking</title>
+      <link>https://draescherl.github.io/tags/networking/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://draescherl.github.io/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>VPN</title>
       <link>https://draescherl.github.io/tags/vpn/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://draescherl.github.io/tags/vpn/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Wireguard</title>
+      <title>WireGuard</title>
       <link>https://draescherl.github.io/tags/wireguard/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://draescherl.github.io/tags/wireguard/</guid>
       <description></description>
