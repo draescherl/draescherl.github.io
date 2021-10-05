@@ -1,25 +1,30 @@
 +++
 author = "Lucas DRAESCHER"
-title = "How to set up a WireGuard VPN"
-date = "2021-09-30"
+title = "Setting up a WireGuard VPN"
+date = "2021-10-05"
 tags = [
-  "Wireguard",
-  "VPN"
+  "WireGuard",
+  "VPN",
+  "networking"
 ]
 +++
+
 
 # Introduction
 In this article, I'll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We'll start off with the server-side configuration and move on to the client-side next.
 
+
 # Prerequisites
-Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it's as simple as running 
+Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it's as simple as running :
 ```bash
 sudo apt update  
 sudo apt install wireguard
 ```
 
+
 # Where to find the files
 All the config files for wireguard can be found in `/etc/wireguard/`. Root access is required to write in this folder. We will be creating a `wg0.conf` file. You can change `wg0` to whatever you want as it is only the name of the interface.
+
 
 # Common steps
 In order to get our server talking with our client, both of them will need a public and a private key. To get them generated, run this command on the server and the client :
@@ -32,8 +37,9 @@ Two files will now have been created : `privatekey` and `publickey`.
 No matter what, NEVER share your private key with anyone
 {{< /notice >}}
 
+
 # Server-side configuration
-If you have not done so already, this is the time to create the config file. Do do so, run 
+If you have not done so already, this is the time to create the config file. Do do so, run :
 ```bash
 sudo touch /etc/wireguard/wg0.conf
 ```
@@ -62,8 +68,9 @@ How to fill the placeholders ?
 - `<subnet>` : virtual subnet, goes in pair with the `<server-ip-address>`. A safe default is `/32`.
 - `<interface>` : the name of the network interface your VPN will listen on.
 
+
 # Client-side configuration
-Just as before, if you have not done so already, you need to create the config file. 
+Just as before, if you have not done so already, you need to create the config file :
 ```bash
 sudo touch /etc/wireguard/wg0.conf
 ```
@@ -93,11 +100,49 @@ However, the three lines under `[Peer]` are new, let's go over them :
 - `Endpoint`, this is where you set the PUBLIC IP address that the server is behind.
 - `AllowedIPs`, here you can set the range of IP addresses to be forwarded to the server. By using `0.0.0.0/0` you're forwarding the entirety of the traffic.
 
+Now that everything is configured, you can bring the VPN's interface up. Assuming you've called it `wg0` run this command :
+```bash
+wg-quick up wg0
+```
+
+{{< notice note >}}
+This command might require sudo privileges.
+{{< /notice >}}
+
+Your client is now ready to be added to the server. You can check the status of the connection by running :
+```bash
+wg
+```
+
+# Connect the client to the server
+Log back into your server and run the following command :
+```bash
+wg set wg0 peer <client-public-key> allowed-ips <client-ip-address>/32
+```
+Replace `<client-public-key>` by the public key you generated on your client and `<client-ip-address>` by the IP address you chose in your client config file.
+
+You can now bring the server's interface up :
+```bash
+wg-quick up wg0
+```
+
+{{< notice note >}}
+This command might require sudo privileges.
+{{< /notice >}}
+
+Finally, you can check if the connection is established correctly by running :
+```bash
+wg
+```
+
+Congratulations, you've just set up your own basic Virtual Private Network. This is a very basic implementation, I encourage you to read the documentation to find out what can be done using this piece of software.
+
 
 # Sources
-Here are the sources I used to write this article and other useful links for troubleshooting :
+Here are the sources I used to write this article and troubleshoot my own installation :
 - [PRO CUSTODIBUS - WIREGUARD ENDPOINTS AND IP ADDRESSES](https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/)
 - [WireGuard man page](https://manpages.debian.org/unstable/wireguard-tools/wg-quick.8.en.html)
+- [Some Unofficial WireGuard Documentation](https://github.com/pirate/wireguard-docs)
 - [The Digital Life - WireGuard installation and configuration on Linux](https://www.the-digital-life.com/wireguard-installation-and-configuration/)
 - [serverfault - Wireguard VPN can't access internet and LAN](https://serverfault.com/questions/1039643/wireguard-vpn-cant-access-internet-and-lan)
 - [IVPN - Linux Autostart WireGuard in systemd](https://www.ivpn.net/knowledgebase/linux/linux-autostart-wireguard-in-systemd/)

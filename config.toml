@@ -26,7 +26,7 @@ enableEmoji = true
   hideCredits = false
   hideCopyright = false
   since = 2021
-  dateFormat = "January 2, 2006"
+  dateFormat = "2 January 2006"
 
   enableTwemoji = false
 
