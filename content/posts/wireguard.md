@@ -14,6 +14,16 @@ tags = [
 In this article, I'll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We'll start off with the server-side configuration and move on to the client-side next.
 
 
+# Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Where to find the files](#where-to-find-the-files)
+3. [Common steps](#common-steps)
+4. [Server-side configuration](#server-side-configuration)
+5. [Client-side configuration](#client-side-configuration)
+6. [Connect the client to the server](#connect-the-client-to-the-server)
+7. [Sources](#sources)
+
+
 # Prerequisites
 Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it's as simple as running :
 ```bash
@@ -34,7 +44,7 @@ wg genkey | tee privatekey | wg pubkey > publickey
 Two files will now have been created : `privatekey` and `publickey`.
 
 {{< notice warning >}}
-No matter what, NEVER share your private key with anyone
+No matter what, NEVER share your private key with anyone.
 {{< /notice >}}
 
 
