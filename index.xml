@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Setting up a WireGuard VPN</title>
+      <title>A super fast WireGuard config</title>
       <link>https://draescherl.github.io/posts/wireguard/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://draescherl.github.io/posts/wireguard/</guid>
       <description>Introduction In this article, I&amp;rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&amp;rsquo;ll start off with the server-side configuration and move on to the client-side next.
-Table of Contents  Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial.</description>
+Table of Contents  Introduction Table of Contents Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial.</description>
     </item>
     
     <item>

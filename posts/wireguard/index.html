@@ -11,17 +11,17 @@
 
     <meta name="author" content="Lucas DRAESCHER">
     <meta name="description" content="Introduction In this article, I&rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&rsquo;ll start off with the server-side configuration and move on to the client-side next.
-Table of Contents  Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial.">
+Table of Contents  Introduction Table of Contents Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial.">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Setting up a WireGuard VPN"/>
+<meta name="twitter:title" content="A super fast WireGuard config"/>
 <meta name="twitter:description" content="Introduction In this article, I&rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&rsquo;ll start off with the server-side configuration and move on to the client-side next.
-Table of Contents  Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial."/>
+Table of Contents  Introduction Table of Contents Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial."/>
 
-    <meta property="og:title" content="Setting up a WireGuard VPN" />
+    <meta property="og:title" content="A super fast WireGuard config" />
 <meta property="og:description" content="Introduction In this article, I&rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&rsquo;ll start off with the server-side configuration and move on to the client-side next.
-Table of Contents  Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial." />
+Table of Contents  Introduction Table of Contents Prerequisites Where to find the files Common steps Server-side configuration Client-side configuration Connect the client to the server Sources  Prerequisites Obviously, the Wireguard software is required to follow this tutorial." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://draescherl.github.io/posts/wireguard/" />
 <meta property="article:published_time" content="2021-10-05T00:00:00+00:00" />
@@ -29,7 +29,7 @@ Table of Contents  Prerequisites Where to find the files Common steps Server-sid
 
 
     <title>
-  Setting up a WireGuard VPN · Lucas DRAESCHER
+  A super fast WireGuard config · Lucas DRAESCHER
 </title>
 
     
@@ -122,7 +122,7 @@ Table of Contents  Prerequisites Where to find the files Common steps Server-sid
         <div class="post-title">
           <h1 class="title">
             <a class="title-link" href="https://draescherl.github.io/posts/wireguard/">
-              Setting up a WireGuard VPN
+              A super fast WireGuard config
             </a>
           </h1>
         </div>
@@ -163,7 +163,9 @@ Table of Contents  Prerequisites Where to find the files Common steps Server-sid
         <h1 id="introduction">Introduction</h1>
 <p>In this article, I&rsquo;ll be writing about how I set up a Wireguard VPN on my home server in order to gain access to my home network remotely. We&rsquo;ll start off with the server-side configuration and move on to the client-side next.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
-<ol>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#where-to-find-the-files">Where to find the files</a></li>
 <li><a href="#common-steps">Common steps</a></li>
@@ -171,7 +173,7 @@ Table of Contents  Prerequisites Where to find the files Common steps Server-sid
 <li><a href="#client-side-configuration">Client-side configuration</a></li>
 <li><a href="#connect-the-client-to-the-server">Connect the client to the server</a></li>
 <li><a href="#sources">Sources</a></li>
-</ol>
+</ul>
 <h1 id="prerequisites">Prerequisites</h1>
 <p>Obviously, the Wireguard software is required to follow this tutorial. On a debian based machine, it&rsquo;s as simple as running :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update  
@@ -193,18 +195,16 @@ sudo apt install wireguard
 <p>If you have not done so already, this is the time to create the config file. Do do so, run :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo touch /etc/wireguard/wg0.conf
 </code></pre></div><p>Insert these contents in the file :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[Interface]  
-<span style="color:#40ffff">PrivateKey</span>=&lt;server-private-key&gt;  
-<span style="color:#40ffff">Address</span>=&lt;server-ip-address&gt;/&lt;subnet&gt;  
-<span style="color:#40ffff">SaveConfig</span>=<span style="color:#24909d">true</span>  
-<span style="color:#40ffff">ListenPort</span> = <span style="color:#3677a9">51820</span>  
-<span style="color:#40ffff">PostUp</span> = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o &lt;interface&gt; -j MASQUERADE;  
-<span style="color:#40ffff">PostDown</span> = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o &lt;interface&gt; -j MASQUERADE;  
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[Interface]
+<span style="color:#40ffff">Address</span> = &lt;server-ip-address&gt;/&lt;subnet&gt;
+<span style="color:#40ffff">PostUp</span> = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o &lt;interface&gt; -j MASQUERADE
+<span style="color:#40ffff">PostDown</span> = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o &lt;interface&gt; -j MASQUERADE
+<span style="color:#40ffff">ListenPort</span> = <span style="color:#3677a9">51820</span>
+<span style="color:#40ffff">PrivateKey</span> = &lt;server-private-key&gt;  
 </code></pre></div><p>Let&rsquo;s go over this config line by line</p>
 <ul>
 <li><code>PrivateKey</code> is the private key of the server.</li>
 <li><code>Address</code> is a list of IP(v4/v6) addresses that the interface can use.</li>
-<li><code>SaveConfig</code> with this flag set to true the configuration file will be overwritten with the current state when the interface is taken down. What this means is that if the command line is used to alter some properties while running, these will be saved to the disk.</li>
 <li><code>ListenPort</code> sets the port the WireGuard server will listen on.</li>
 <li><code>PostUp</code> and <code>PostDown</code> are commands that will be ran just after the interface is brought up or down.</li>
 </ul>
@@ -212,25 +212,30 @@ sudo apt install wireguard
 <ul>
 <li><code>&lt;server-private-key&gt; </code> : the private key you just generated.</li>
 <li><code>&lt;server-ip-address&gt;</code> : virtual address of the local WireGuard peer. A safe default is <code>10.0.0.1</code>.</li>
-<li><code>&lt;subnet&gt;</code> : virtual subnet, goes in pair with the <code>&lt;server-ip-address&gt;</code>. A safe default is <code>/32</code>.</li>
+<li><code>&lt;subnet&gt;</code> : virtual subnet, goes in pair with the <code>&lt;server-ip-address&gt;</code>. A safe default is <code>/24</code>.</li>
 <li><code>&lt;interface&gt;</code> : the name of the network interface your VPN will listen on.</li>
 </ul>
-<h1 id="client-side-configuration">Client-side configuration</h1>
+<p>[Optional] Configure wireguard to start when the server boots up :</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl <span style="color:#24909d">enable</span> wg-quick@wg0
+</code></pre></div><h1 id="client-side-configuration">Client-side configuration</h1>
 <p>Just as before, if you have not done so already, you need to create the config file :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo touch /etc/wireguard/wg0.conf
 </code></pre></div><p>Now, open the config file you just created with your editor of choice. We&rsquo;ll be using nano :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/wireguard/wg0.conf
 </code></pre></div><p>Paste these lines into it :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[Interface]
-<span style="color:#40ffff">PrivateKey</span> = &lt;client-private-key&gt;
 <span style="color:#40ffff">Address</span> = &lt;client-ip-address&gt;/&lt;subnet&gt;
-<span style="color:#40ffff">SaveConfig</span> = <span style="color:#24909d">true</span>
+<span style="color:#40ffff">PrivateKey</span> = &lt;client-private-key&gt;
 
 [Peer]
 <span style="color:#40ffff">PublicKey</span> = &lt;server-public-key&gt;
 <span style="color:#40ffff">Endpoint</span> = &lt;server-public-ip-address&gt;:51820
-<span style="color:#40ffff">AllowedIPs</span> = 0.0.0.0/0
-</code></pre></div><p>You should already be familiar with the first three lines as they are exactly the same as with the server config. The only difference being that the <code>Address</code> CANNOT be the same as the server. You can use <code>10.0.0.2/32</code> for example.</p>
+<span style="color:#40ffff">AllowedIPs</span> = 0.0.0.0/0, ::/0
+
+<span style="color:#999;font-style:italic"># This is for if you&#39;re behind a NAT and</span>
+<span style="color:#999;font-style:italic"># want the connection to be kept alive.</span>
+<span style="color:#40ffff">PersistentKeepalive</span> = <span style="color:#3677a9">25</span>
+</code></pre></div><p>You should already be familiar with the first lines as they are exactly the same as with the server config. The only difference being that the <code>Address</code> CANNOT be the same as the server. You can use <code>10.0.0.3/24</code> for example.</p>
 <p>However, the three lines under <code>[Peer]</code> are new, let&rsquo;s go over them :</p>
 <ul>
 <li><code>PublicKey</code>, here you need to paste the server&rsquo;s public key that you generated earlier.</li>
@@ -249,11 +254,10 @@ sudo apt install wireguard
 <p>Your client is now ready to be added to the server. You can check the status of the connection by running :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg
 </code></pre></div><h1 id="connect-the-client-to-the-server">Connect the client to the server</h1>
-<p>Log back into your server and run the following command :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg <span style="color:#24909d">set</span> wg0 peer &lt;client-public-key&gt; allowed-ips &lt;client-ip-address&gt;/32
-</code></pre></div><p>Replace <code>&lt;client-public-key&gt;</code> by the public key you generated on your client and <code>&lt;client-ip-address&gt;</code> by the IP address you chose in your client config file.</p>
 <p>You can now bring the server&rsquo;s interface up :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg-quick up wg0
+</code></pre></div><p>Add the client to the server using :</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg <span style="color:#24909d">set</span> wg0 peer &lt;client-public-key&gt; allowed-ips &lt;client-ip-address&gt;/32
 </code></pre></div><div class="notice note">
   <div class="notice-title">
     <i class="fa fa-sticky-note" aria-hidden="true"></i>Note
@@ -261,9 +265,11 @@ sudo apt install wireguard
   <div class="notice-content">This command might require sudo privileges.</div>
 </div>
 
-<p>Finally, you can check if the connection is established correctly by running :</p>
+<p>You can check if the connection is established correctly by running :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg
-</code></pre></div><p>Congratulations, you&rsquo;ve just set up your own basic Virtual Private Network. This is a very basic implementation, I encourage you to read the documentation to find out what can be done using this piece of software.</p>
+</code></pre></div><p>If everything is in order, save the server&rsquo;s configuration using :</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wg-quick save wg0
+</code></pre></div><p>Congratulations, you&rsquo;ve just set up your own Virtual Private Network. This is a very basic implementation, I encourage you to read the documentation to find out what can be done using this piece of software.</p>
 <h1 id="sources">Sources</h1>
 <p>Here are the sources I used to write this article and troubleshoot my own installation :</p>
 <ul>
@@ -273,6 +279,7 @@ sudo apt install wireguard
 <li><a href="https://www.the-digital-life.com/wireguard-installation-and-configuration/">The Digital Life - WireGuard installation and configuration on Linux</a></li>
 <li><a href="https://serverfault.com/questions/1039643/wireguard-vpn-cant-access-internet-and-lan">serverfault - Wireguard VPN can&rsquo;t access internet and LAN</a></li>
 <li><a href="https://www.ivpn.net/knowledgebase/linux/linux-autostart-wireguard-in-systemd/">IVPN - Linux Autostart WireGuard in systemd</a></li>
+<li><a href="https://gist.github.com/chrisswanda/88ade75fc463dcf964c6411d1e9b20f4">Stupid simple setting up WireGuard - Server and multiple peers</a></li>
 </ul>
 
       </div>

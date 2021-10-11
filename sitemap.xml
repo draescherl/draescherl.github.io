@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://draescherl.github.io/posts/wireguard/</loc>
+    <lastmod>2021-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://draescherl.github.io/</loc>
     <lastmod>2021-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -14,11 +19,6 @@
   
   <url>
     <loc>https://draescherl.github.io/posts/</loc>
-    <lastmod>2021-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://draescherl.github.io/posts/wireguard/</loc>
     <lastmod>2021-10-05T00:00:00+00:00</lastmod>
   </url>
   
